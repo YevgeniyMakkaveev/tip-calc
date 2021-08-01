@@ -16,55 +16,62 @@
     <img src="./images/logo.svg" alt="logo">
   </div>
   <div class="app-wrapper">
-    <div class="bill">
-      <h2 class="label-text">Bill</h2>
-      <input type="number" class="bill-input" placeholder="0">
-    </div>
-    <div class="label">
-      <h2 class="label-text">Select tip</h2>
-    </div>
-    <div class="button-nest">
-      <button class="tip-button" value="5">5%</button>
-      <button class="tip-button" value="10">10%</button>
-      <button class="tip-button" value="15">15%</button>
-      <button class="tip-button" value="25">25%</button>
-      <button class="tip-button" value="50">50%</button>
-      <input class="tip-custom" type="number" placeholder="Custom" />
-    </div>
-    <div class="people-number">
-      <h2 class="label-text people-num-label">Number of People</h2>
-      <h2 class="error error-people"> Can't be Zero</h2>
-      <input class="people-num-input" type="number" placeholder="0" />
-    </div>
-    <div class="result">
-      <div class="result-row">
-        <div class="result-label">
-          <h2 class="label-text res-text">Tip Amount</h2>
-          <h3 class="res-labbel-under">\ person</h3>
+    <div class="left">
+      <div class="bill">
+        <h2 class="label-text gray">Bill</h2>
+        <input type="number" class="bill-input" placeholder="0">
+      </div>
+      <div class="button-wrapper">
+        <div class="label">
+          <h2 class="label-text gray">Select tip</h2>
         </div>
-        <div class="result-money">
-          <h2 class="label-text money-person">$0.00</h2>
+        <div class="button-nest">
+          <button class="tip-button" value="5">5%</button>
+          <button class="tip-button" value="10">10%</button>
+          <button class="tip-button" value="15">15%</button>
+          <button class="tip-button" value="25">25%</button>
+          <button class="tip-button" value="50">50%</button>
+          <input class="tip-custom" type="number" placeholder="Custom" />
         </div>
       </div>
-      <div class="result-row">
-        <div class="result-label">
-          <h2 class="label-text res-text">Total</h2>
-          <h3 class="res-labbel-under">\ person</h3>
+      <div class="people-number">
+        <h2 class="label-text people-num-label gray">Number of People</h2>
+        <h2 class="error error-people"> Can't be Zero</h2>
+        <input class="people-num-input" type="number" placeholder="0" />
+      </div>
+    </div>
+    <div class="right">
+      <div class="result">
+        <div class="result-row">
+          <div class="result-label">
+            <h2 class="label-text res-text">Tip Amount</h2>
+            <h3 class="res-labbel-under gray">\ person</h3>
+          </div>
+          <div class="result-money">
+            <h2 class="money-person">$0.00</h2>
+          </div>
         </div>
-        <div class="result-money">
-          <h2 class="label-text money-total">$0.00</h2>
+        <div class="result-row">
+          <div class="result-label">
+            <h2 class="label-text res-text">Total</h2>
+            <h3 class="res-labbel-under gray">\ person</h3>
+          </div>
+          <div class="result-money">
+            <h2 class="money-total">$0.00</h2>
+          </div>
         </div>
       </div>
       <div class="reset-wrap">
         <button class="reset-button">Reset</button>
       </div>
+
     </div>
 
   </div>
-  <!-- <div class="attribution">
+  <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+    Coded by <a target="_blank" href="https://github.com/YevgeniyMakkaveev">Yevgeniy Makkaveev</a>.
+  </div>
 </body>
 <script src="app.js"></script>
 

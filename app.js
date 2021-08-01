@@ -54,6 +54,7 @@ const handleBill = (e) => {
 const handlePeople = (e) => {
   const value = e.target.value;
   peopleInput.classList.remove("wrong-input");
+  errorMsg.classList.remove("visible");
   if (!isNaN(value) && value.length < 4 && value != 0) {
     peopleNum = value;
     console.log(peopleNum);
@@ -75,6 +76,8 @@ const startCount = () => {
 const resetValue = () => {
   removeActiveClass();
   clearPers();
+  peopleInput.classList.remove("wrong-input");
+  errorMsg.classList.remove("visible");
   billInput.value = null;
   bill = 0;
   peopleInput.value = 1;
