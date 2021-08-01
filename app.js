@@ -33,7 +33,7 @@ const getTipBtn = (e) => {
 const getInputPers = (e) => {
   removeActiveClass();
   const value = e.target.value;
-  if (!isNaN(value) && value.length < 4 && value != 0) {
+  if (!isNaN(value) && value.length < 4 && value > 0) {
     persent = value;
     startCount();
   } else {
