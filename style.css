@@ -18,7 +18,8 @@
 
 input,
 button {
- font: inherit
+ font: inherit;
+ border: none;
 }
 
 input::-webkit-inner-spin-button {
@@ -45,12 +46,11 @@ input[type=number] {
  -moz-appearance: textfield;
  text-align: right;
  background-color: var(--LightGrayishCyan);
- border: none;
  color: var(--DarkCyan)
 }
 
 button {
- border: none;
+ cursor: pointer;
 }
 
 body {
@@ -85,7 +85,8 @@ body {
 
 
 .bill {
- margin: 2rem
+ margin: 2rem;
+ position: relative;
 }
 
 .bill-input {
@@ -116,8 +117,12 @@ body {
  border-radius: 0.3em;
  font-size: 24px;
 }
+.active-button{
+ background-color: var(--StrongCyan);
+ color: var(--DarkCyan)
+}
 
-.button-custom {
+.tip-custom {
  width: 30vw;
  border-radius: 0.3em;
  font-size: 24px;
@@ -125,11 +130,28 @@ body {
 }
 
 .people-number {
- margin: 1rem 0
+ margin: 1rem 0;
+ position:relative;
+}
+.wrong-input {
+ border: 1px solid orange;
+}
+
+.error{
+ display: none;
+ color: orange;
+ font-size: 0.6em;
+position: absolute;
+left: 80%;
+top: -0.7em;
+}
+.visible{
+ display: block
 }
 
 .people-num-input {
  display: block;
+ 
  width: 80vw;
  margin: 0.5rem auto;
  background: url(/images/icon-person.svg) no-repeat;
