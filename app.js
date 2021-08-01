@@ -43,7 +43,7 @@ const getInputPers = (e) => {
 
 const handleBill = (e) => {
   const value = e.target.value;
-  if (!isNaN(value) && value.length < 6 && value != 0) {
+  if (!isNaN(value) && value.length < 6 && value > 0) {
     bill = value;
     console.log(bill);
     startCount();
@@ -55,7 +55,7 @@ const handlePeople = (e) => {
   const value = e.target.value;
   peopleInput.classList.remove("wrong-input");
   errorMsg.classList.remove("visible");
-  if (!isNaN(value) && value.length < 4 && value != 0) {
+  if (!isNaN(value) && value.length < 4 && value > 0) {
     peopleNum = value;
     console.log(peopleNum);
     startCount();
@@ -66,7 +66,7 @@ const handlePeople = (e) => {
 };
 
 const startCount = () => {
-  if (bill != 0 && persent && peopleNum) {
+  if (bill > 0 && persent && peopleNum) {
     total = ((bill / 100) * persent).toFixed(2);
     console.log(total);
     moneyTotal.innerHTML = `$${total}`;
