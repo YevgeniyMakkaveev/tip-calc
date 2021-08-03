@@ -36,19 +36,32 @@ const getInputPers = (e) => {
   if (!isNaN(value) && value.length < 4 && value > 0) {
     persent = value;
     startCount();
+  } else if (
+    (e.inputType === "insertText" && isNaN(e.data)) ||
+    value.length > 3
+  ) {
+    customPersInput.value = persent;
+    startCount();
   } else {
-    customPersInput.value = null;
+    persent = null;
   }
 };
 
 const handleBill = (e) => {
   const value = e.target.value;
+  const check = value.toString();
+  console.log(e);
   if (!isNaN(value) && value.length < 6 && value > 0) {
     bill = value;
-    console.log(bill);
+    startCount();
+  } else if (
+    (e.inputType === "insertText" && isNaN(e.data)) ||
+    value.length > 5
+  ) {
+    billInput.value = bill;
     startCount();
   } else {
-    billInput.value = null;
+    bill = null;
   }
 };
 const handlePeople = (e) => {
