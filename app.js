@@ -7,7 +7,7 @@ const moneyTotal = document.querySelector(".money-total");
 const resetBtn = document.querySelector(".reset-button");
 const errorMsg = document.querySelector(".error-people");
 
-let peopleNum;
+let peopleNum = 1;
 let persent;
 let bill;
 let total;
@@ -23,7 +23,6 @@ const getTipBtn = (e) => {
   removeActiveClass();
   clearPers();
   e.target.className += " active-button";
-  console.log(e);
   const value = e.target.value;
   persent = value;
   e.target.class;
@@ -41,16 +40,14 @@ const getInputPers = (e) => {
     value.length > 3
   ) {
     customPersInput.value = persent;
-    startCount();
   } else {
     persent = null;
+    customPersInput.value = null;
   }
 };
 
 const handleBill = (e) => {
   const value = e.target.value;
-  const check = value.toString();
-  console.log(e);
   if (!isNaN(value) && value.length < 6 && value > 0) {
     bill = value;
     startCount();
@@ -59,9 +56,9 @@ const handleBill = (e) => {
     value.length > 5
   ) {
     billInput.value = bill;
-    startCount();
   } else {
     bill = null;
+    billInput.value = null;
   }
 };
 const handlePeople = (e) => {
@@ -95,6 +92,8 @@ const resetValue = () => {
   bill = 0;
   peopleInput.value = 1;
   peopleNum = 1;
+  moneyTotal.innerHTML = "$0.00";
+  moneyPerson.innerHTML = "$0.00";
 };
 
 tipButtons.forEach((elem) =>
